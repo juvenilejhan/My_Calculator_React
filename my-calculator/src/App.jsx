@@ -8,7 +8,7 @@ const H1 = styled.h1`
 export default function App() {
   return (
     <>
-      <H1>Welcome to Calculator and made your calculation easy!</H1>
+      <H1>Welcome to Calculator and make your calculation easy!</H1>
       <Board />
     </>
   );
