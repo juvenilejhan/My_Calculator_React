@@ -8,7 +8,7 @@ const StyledBoard = styled.div`
   width: 50vw;
   max-width: 500px;
   min-width: 325px;
-  margin: auto;
+  margin: 0 auto;
   height: 75vh;
   padding: 0.5rem;
   border: 2px #9ac11c solid;
