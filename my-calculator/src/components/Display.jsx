@@ -9,6 +9,9 @@ const StyledDisplay = styled.div`
   color: black;
   font-weight: bold;
   padding: 0.5rem;
+  border: 2px black solid;
+  font-size: 2rem;
+  border-radius: 0.5rem;
 `;
 
 export default function Display({input}) {
