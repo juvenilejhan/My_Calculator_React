@@ -123,3 +123,7 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.equal-button{
+  background-color: #c084fc;
+}

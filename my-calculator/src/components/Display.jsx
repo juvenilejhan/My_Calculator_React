@@ -1,10 +1,10 @@
 import { styled } from "styled-components";
 
 const StyledDisplay = styled.div`
-  background-color: rgba(216, 221, 223, 0.5);
+  background-color: rgb(166, 196, 207);
   height: 25%;
-  display: grid;
-  justify-content: right;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
   color: black;
   font-weight: bold;
