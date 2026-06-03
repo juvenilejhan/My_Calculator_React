@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import KeyPad from "./KeyPad";
+import KeyPad from "./Keypad";
 
 const StyledKeyBoard = styled.div`
   background-color: rgba(40, 187, 192, 0.5);
@@ -14,25 +14,25 @@ const StyledKeyBoard = styled.div`
   border-radius: 0.5rem;
 `;
 
-export default function KeyBoard({ handleDisplay }) {
+export default function KeyBoard({ onInput, onReset }) {
   return (
     <StyledKeyBoard>
-      <KeyPad handleDisplay={handleDisplay} value="1" />
-      <KeyPad handleDisplay={handleDisplay} value="2" />
-      <KeyPad handleDisplay={handleDisplay} value="3" />
-      <KeyPad type="special" handleDisplay={handleDisplay} value="CE" />
-      <KeyPad handleDisplay={handleDisplay} value="4" />
-      <KeyPad handleDisplay={handleDisplay} value="5" />
-      <KeyPad handleDisplay={handleDisplay} value="6" />
-      <KeyPad type="operator" handleDisplay={handleDisplay} value="+" />
-      <KeyPad handleDisplay={handleDisplay} value="7" />
-      <KeyPad handleDisplay={handleDisplay} value="8" />
-      <KeyPad handleDisplay={handleDisplay} value="9" />
-      <KeyPad type="operator" handleDisplay={handleDisplay} value="-" />
-      <KeyPad handleDisplay={handleDisplay} value="0" />
-      <KeyPad type="operator" handleDisplay={handleDisplay} value="*" />
-      <KeyPad type="operator" handleDisplay={handleDisplay} value="/" />
-      <KeyPad type="special" handleDisplay={handleDisplay} value="=" />
+      <KeyPad onInput={onInput} value="1" />
+      <KeyPad onInput={onInput} value="2" />
+      <KeyPad onInput={onInput} value="3" />
+      <KeyPad type="special" onInput={onInput} onReset={onReset} value="CE" />
+      <KeyPad onInput={onInput} value="4" />
+      <KeyPad onInput={onInput} value="5" />
+      <KeyPad onInput={onInput} value="6" />
+      <KeyPad type="operator" onInput={onInput} value="+" />
+      <KeyPad onInput={onInput} value="7" />
+      <KeyPad onInput={onInput} value="8" />
+      <KeyPad onInput={onInput} value="9" />
+      <KeyPad type="operator" onInput={onInput} value="-" />
+      <KeyPad onInput={onInput} value="0" />
+      <KeyPad type="operator" onInput={onInput} value="*" />
+      <KeyPad type="operator" onInput={onInput} value="/" />
+      <KeyPad type="special" onInput={onInput} value="=" />
     </StyledKeyBoard>
   );
 }

@@ -18,9 +18,12 @@ const StyledKeyPad = styled.button`
   }
 `;
 
-export default function KeyPad({ handleDisplay, value, type }) {
+export default function KeyPad({ onInput, value, type, onReset }) {
   return (
-    <StyledKeyPad $type={type} onClick={() => handleDisplay(value)}>
+    <StyledKeyPad
+      $type={type}
+      onClick={() => (value === "CE" ? onReset() : onInput(value))}
+    >
       {value}
     </StyledKeyPad>
   );

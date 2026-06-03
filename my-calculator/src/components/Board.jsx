@@ -23,14 +23,19 @@ export default function Board() {
 
   function handleDisplay(input) {
     setDisplayOutput((prevOutput) => {
-      return prevOutput + input;
+      if (prevOutput === "0") return input;
+      else return prevOutput + input;
     });
+  }
+
+  function resetDisplay() {
+    setDisplayOutput("0");
   }
 
   return (
     <StyledBoard>
       <Display input={displayOutput} />
-      <KeyBoard handleDisplay={handleDisplay} />
+      <KeyBoard onInput={handleDisplay} onReset={resetDisplay} />
     </StyledBoard>
   );
 }
