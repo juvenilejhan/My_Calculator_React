@@ -23,18 +23,17 @@ export default function Board() {
   const [operatorCount, setOperatorCount] = useState(0);
 
   const doCalculation = (num1, num2, operator) => {
-
     switch (operator) {
       case "+":
-        return num1 + num2;
+        return String(num1 + num2);
       case "-":
-        return num1 - num2;
+        return String(num1 - num2);
       case "*":
-        return num1 * num2; 
+        return String(num1 * num2);
       case "/":
-        return num1 / num2; 
+        return String(num1 / num2);
       default:
-        return -1;
+        return String(-1);
     }
   };
   const processString = (prevOutputs) => {
@@ -69,15 +68,18 @@ export default function Board() {
         input === "+" ||
         input === "-" ||
         input === "*" ||
-        input === "/"
+        input === "/" ||
+        input === "="
       ) {
         nextOutput = [...prevOutputs, input];
         setOperatorCount((prevCount) => prevCount + 1);
         // console.log(calcFlag);
-        if (operatorCount === 2) {
+        if (operatorCount === 2 || input === "=") {
           // console.log(prevOutputs);
           // console.log(nextOutput);
           nextOutput = processString(prevOutputs);
+        } else {
+          //
         }
       }
 
