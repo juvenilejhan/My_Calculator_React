@@ -14,6 +14,6 @@ const StyledDisplay = styled.div`
   border-radius: 0.5rem;
 `;
 
-export default function Display({input}) {
+export default function Display({ input }) {
   return <StyledDisplay>{input}</StyledDisplay>;
 }
